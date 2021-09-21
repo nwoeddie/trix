@@ -27,6 +27,7 @@ class Trix.BlockView extends Trix.ObjectView
       attributes = dir: "rtl" if @block.isRTL()
 
       element = makeElement({tagName, attributes})
+      element.className = css.paragraph
       element.appendChild(node) for node in nodes
       [element]
 
